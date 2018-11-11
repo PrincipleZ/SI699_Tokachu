@@ -12,7 +12,7 @@
         <!--Explore-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tokachu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ExploreViewController" customModule="Tokachu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +47,7 @@
         <!--Favorite-->
         <scene sceneID="V1h-7T-ewW">
             <objects>
-                <viewController id="xbx-1D-FMj" sceneMemberID="viewController">
+                <viewController id="xbx-1D-FMj" customClass="FavoriteViewController" customModule="Tokachu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kYX-65-SNI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +63,7 @@
         <!--Add-->
         <scene sceneID="9WJ-O9-rhe">
             <objects>
-                <viewController id="M2N-Hz-lt9" sceneMemberID="viewController">
+                <viewController id="M2N-Hz-lt9" customClass="AddViewController" customModule="Tokachu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tbA-HR-qbm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
         <!--Updates-->
         <scene sceneID="Kr2-Y1-KVM">
             <objects>
-                <viewController id="xYA-3s-b6f" sceneMemberID="viewController">
+                <viewController id="xYA-3s-b6f" customClass="UpdatesViewController" customModule="Tokachu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6qm-Oo-s0P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +95,7 @@
         <!--Account-->
         <scene sceneID="g9z-ka-7ek">
             <objects>
-                <viewController id="4FR-rC-bBE" sceneMemberID="viewController">
+                <viewController id="4FR-rC-bBE" customClass="AccountViewController" customModule="Tokachu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xdA-NT-OI5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FdM-5N-okF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2378" y="-838"/>
+            <point key="canvasLocation" x="-3810" y="-1004"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IuY-5c-Kie">
@@ -184,6 +184,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hnx-aO-Fm9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xEq-Sg-373">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
