@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2163B6A92197A24400728639 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2163B6A82197A24400728639 /* README.md */; };
 		42F9EF7D2192187D00BAFA92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */; };
-		42F9EF7F2192187D00BAFA92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F9EF7E2192187D00BAFA92 /* ViewController.swift */; };
+		42F9EF7F2192187D00BAFA92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */; };
 		42F9EF822192187D00BAFA92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F9EF802192187D00BAFA92 /* Main.storyboard */; };
 		42F9EF842192187E00BAFA92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F9EF832192187E00BAFA92 /* Assets.xcassets */; };
 		42F9EF872192187E00BAFA92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F9EF852192187E00BAFA92 /* LaunchScreen.storyboard */; };
@@ -16,9 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2163B6A82197A24400728639 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		42F9EF792192187D00BAFA92 /* Tokachu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tokachu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		42F9EF7E2192187D00BAFA92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		42F9EF812192187D00BAFA92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42F9EF832192187E00BAFA92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42F9EF862192187E00BAFA92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,8 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */,
-				42F9EF7E2192187D00BAFA92 /* ViewController.swift */,
+				42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */,
 				42F9EF802192187D00BAFA92 /* Main.storyboard */,
+				2163B6A82197A24400728639 /* README.md */,
 				42F9EF832192187E00BAFA92 /* Assets.xcassets */,
 				42F9EF852192187E00BAFA92 /* LaunchScreen.storyboard */,
 				42F9EF882192187E00BAFA92 /* Info.plist */,
@@ -150,6 +153,7 @@
 			files = (
 				42F9EF872192187E00BAFA92 /* LaunchScreen.storyboard in Resources */,
 				42F9EF842192187E00BAFA92 /* Assets.xcassets in Resources */,
+				2163B6A92197A24400728639 /* README.md in Resources */,
 				42F9EF822192187D00BAFA92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,7 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42F9EF7F2192187D00BAFA92 /* ViewController.swift in Sources */,
+				42F9EF7F2192187D00BAFA92 /* LoginViewController.swift in Sources */,
 				42F9EF7D2192187D00BAFA92 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,13 +373,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TDWW635G82;
+				DEVELOPMENT_TEAM = TGUV47EGUU;
 				INFOPLIST_FILE = Tokachu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu;
+				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.shaungc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -388,13 +392,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TDWW635G82;
+				DEVELOPMENT_TEAM = TGUV47EGUU;
 				INFOPLIST_FILE = Tokachu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu;
+				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.shaungc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
