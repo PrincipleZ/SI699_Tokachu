@@ -15,3 +15,7 @@
   - Important: work on different stuff. Don't work on the same feature, same view controller at the same time.
 - ~~Create a clickable item in create account page nav, in order to `next` to next onboarding step.~~
 - ~~Fix tab views title disappeared because there's a nav view at login/welcome overlaying.~~
+
+## Reference
+
+- [This Repo URL](https://github.com/PrincipleZ/SI699_Tokachu)
