@@ -202,6 +202,9 @@
                     <tabBarItem key="tabBarItem" tag="1" title="Add" id="3K2-VR-ryI"/>
                     <navigationItem key="navigationItem" title="Add" id="CUB-I0-Qag"/>
                     <size key="freeformSize" width="375" height="1500"/>
+                    <connections>
+                        <outlet property="scrollView" destination="cht-ba-4U4" id="eJM-v1-8aZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tid-FQ-iNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
