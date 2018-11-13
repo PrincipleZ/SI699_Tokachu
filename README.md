@@ -6,6 +6,8 @@
 - [How to add new tab](https://www.youtube.com/watch?v=YlkAq5nY1-4)
 - [Basic Setup each tab view controller](https://www.youtube.com/watch?v=erUWj0gOb7k)
 - [Large title](https://www.youtube.com/watch?v=vAwWlDg09gQ)
+- [Ways to dismiss keyboard](https://medium.com/@KaushElsewhere/how-to-dismiss-keyboard-in-a-view-controller-of-ios-3b1bfe973ad1)
+  - [Apple Official Doc](https://developer.apple.com/library/archive/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html)
 
 ## TODO
 
