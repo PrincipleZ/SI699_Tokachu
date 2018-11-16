@@ -11,6 +11,9 @@
 
 ## TODO
 
+- [ ] How to dynamic button
+- [ ] How to collection: [testing collectionview from a video tutorial](https://www.youtube.com/watch?v=_8_UsVoSfZE)
+
 - [x] Concerns: how to deal with multiple teammembers [editing the same storyboard](https://www.marinosoftware.com/insights/storyboards-multiple-developers-and-git).
   - --> unless you're working on the **same view controller & more than one change**, otherwise it can auto merge most of the time
   - Important: dev should take ownership of his/her code & the one who modify it if a change is needed.
