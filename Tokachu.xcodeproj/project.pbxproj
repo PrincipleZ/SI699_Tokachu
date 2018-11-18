@@ -13,6 +13,9 @@
 		2163B6AF2197AC9800728639 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163B6AE2197AC9800728639 /* AddViewController.swift */; };
 		2163B6B12197ACAC00728639 /* UpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163B6B02197ACAC00728639 /* UpdatesViewController.swift */; };
 		2163B6B32197ACBD00728639 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163B6B22197ACBD00728639 /* AccountViewController.swift */; };
+		42B3F889219E471E00C69194 /* Utils in Resources */ = {isa = PBXBuildFile; fileRef = 42B3F888219E471E00C69194 /* Utils */; };
+		42B3F88B219E48C300C69194 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 42B3F88A219E48C300C69194 /* Models */; };
+		42F8CEA321A204DC001A616E /* Constants in Resources */ = {isa = PBXBuildFile; fileRef = 42F8CEA221A204DC001A616E /* Constants */; };
 		42F9EF7D2192187D00BAFA92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */; };
 		42F9EF7F2192187D00BAFA92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */; };
 		42F9EF822192187D00BAFA92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F9EF802192187D00BAFA92 /* Main.storyboard */; };
@@ -29,6 +32,9 @@
 		2163B6AE2197AC9800728639 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		2163B6B02197ACAC00728639 /* UpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesViewController.swift; sourceTree = "<group>"; };
 		2163B6B22197ACBD00728639 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		42B3F888219E471E00C69194 /* Utils */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utils; sourceTree = "<group>"; };
+		42B3F88A219E48C300C69194 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		42F8CEA221A204DC001A616E /* Constants */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Constants; sourceTree = "<group>"; };
 		42F9EF792192187D00BAFA92 /* Tokachu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tokachu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -83,8 +89,11 @@
 				42F9EF852192187E00BAFA92 /* LaunchScreen.storyboard */,
 				42F9EF882192187E00BAFA92 /* Info.plist */,
 				2163B6AA2197AAF700728639 /* ExploreViewController.swift */,
+				42F8CEA221A204DC001A616E /* Constants */,
 				2163B6AC2197AC2500728639 /* FavoriteViewController.swift */,
+				42B3F888219E471E00C69194 /* Utils */,
 				2163B6AE2197AC9800728639 /* AddViewController.swift */,
+				42B3F88A219E48C300C69194 /* Models */,
 				2163B6B02197ACAC00728639 /* UpdatesViewController.swift */,
 				2163B6B22197ACBD00728639 /* AccountViewController.swift */,
 			);
@@ -168,9 +177,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42B3F88B219E48C300C69194 /* Models in Resources */,
 				42F9EF872192187E00BAFA92 /* LaunchScreen.storyboard in Resources */,
 				42F9EF842192187E00BAFA92 /* Assets.xcassets in Resources */,
+				42B3F889219E471E00C69194 /* Utils in Resources */,
 				2163B6A92197A24400728639 /* README.md in Resources */,
+				42F8CEA321A204DC001A616E /* Constants in Resources */,
 				42F9EF822192187D00BAFA92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
