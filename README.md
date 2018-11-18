@@ -6,8 +6,13 @@
 - [How to add new tab](https://www.youtube.com/watch?v=YlkAq5nY1-4)
 - [Basic Setup each tab view controller](https://www.youtube.com/watch?v=erUWj0gOb7k)
 - [Large title](https://www.youtube.com/watch?v=vAwWlDg09gQ)
+- [Ways to dismiss keyboard](https://medium.com/@KaushElsewhere/how-to-dismiss-keyboard-in-a-view-controller-of-ios-3b1bfe973ad1)
+  - [Apple Official Doc](https://developer.apple.com/library/archive/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html)
 
 ## TODO
+
+- [ ] How to dynamic button
+- [ ] How to collection: [testing collectionview from a video tutorial](https://www.youtube.com/watch?v=_8_UsVoSfZE)
 
 - [x] Concerns: how to deal with multiple teammembers [editing the same storyboard](https://www.marinosoftware.com/insights/storyboards-multiple-developers-and-git).
   - --> unless you're working on the **same view controller & more than one change**, otherwise it can auto merge most of the time

@@ -11,8 +11,8 @@ import UIKit
 
 class ExploreViewController: UIViewController {
     
-    var username: String?
-    var password: String?
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
