@@ -538,7 +538,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G5k-ZB-fNT">
-                                <rect key="frame" x="120.5" y="243.5" width="134" height="180"/>
+                                <rect key="frame" x="120.5" y="208.5" width="134" height="250"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" background="arrow-bottom" translatesAutoresizingMaskIntoConstraints="NO" id="OXg-yV-weI">
                                         <rect key="frame" x="0.0" y="0.0" width="134" height="30"/>
@@ -560,8 +560,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn9-Qi-wyS">
+                                        <rect key="frame" x="42" y="100" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="1" green="0.072387332528156434" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbj-g3-12P">
-                                        <rect key="frame" x="48" y="100" width="38" height="30"/>
+                                        <rect key="frame" x="48" y="170" width="38" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="38" id="eBx-CP-GFN"/>
                                             <constraint firstAttribute="height" constant="30" id="eos-5C-ZZG"/>
@@ -569,13 +575,10 @@
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="loginTapped:" destination="gZc-J1-w13" eventType="touchUpInside" id="RVE-UD-4rP"/>
-                                            <segue destination="hnx-aO-Fm9" kind="popoverPresentation" popoverAnchorView="vbj-g3-12P" id="kyy-LB-K4f">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPQ-lW-EzT">
-                                        <rect key="frame" x="13.5" y="150" width="107" height="30"/>
+                                        <rect key="frame" x="13.5" y="220" width="107" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="DYZ-mD-WXI"/>
                                             <constraint firstAttribute="width" constant="107" id="UPk-yc-FgU"/>
@@ -595,11 +598,15 @@
                     <connections>
                         <outlet property="PasswordTextField" destination="BEE-QJ-Jy4" id="0mc-kK-fDV"/>
                         <outlet property="UsernameTextField" destination="OXg-yV-weI" id="KL6-Lz-TGY"/>
+                        <outlet property="errorLabel" destination="fn9-Qi-wyS" id="gV8-Ay-QCp"/>
+                        <outlet property="passwordTextField" destination="BEE-QJ-Jy4" id="6sf-K0-qa6"/>
+                        <outlet property="usernameTextField" destination="OXg-yV-weI" id="gqY-t0-0BH"/>
+                        <segue destination="hnx-aO-Fm9" kind="showDetail" identifier="LogInSegue" id="1Qy-A0-cm8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FdM-5N-okF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2378" y="-778"/>
+            <point key="canvasLocation" x="-2378.4000000000001" y="-778.56071964017997"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IuY-5c-Kie">

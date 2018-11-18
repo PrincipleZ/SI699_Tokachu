@@ -17,9 +17,10 @@
 		2163B6AF2197AC9800728639 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163B6AE2197AC9800728639 /* AddViewController.swift */; };
 		2163B6B12197ACAC00728639 /* UpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163B6B02197ACAC00728639 /* UpdatesViewController.swift */; };
 		2163B6B32197ACBD00728639 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163B6B22197ACBD00728639 /* AccountViewController.swift */; };
-		42B3F889219E471E00C69194 /* Utils in Resources */ = {isa = PBXBuildFile; fileRef = 42B3F888219E471E00C69194 /* Utils */; };
+		421369A021A21B1F003F0032 /* WSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699B21A21B1F003F0032 /* WSConstants.swift */; };
+		421369A121A21B1F003F0032 /* UserDefaultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699C21A21B1F003F0032 /* UserDefaultConstants.swift */; };
+		421369A221A21B1F003F0032 /* WSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699E21A21B1F003F0032 /* WSUtils.swift */; };
 		42B3F88B219E48C300C69194 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 42B3F88A219E48C300C69194 /* Models */; };
-		42F8CEA321A204DC001A616E /* Constants in Resources */ = {isa = PBXBuildFile; fileRef = 42F8CEA221A204DC001A616E /* Constants */; };
 		42F9EF7D2192187D00BAFA92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */; };
 		42F9EF7F2192187D00BAFA92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */; };
 		42F9EF822192187D00BAFA92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F9EF802192187D00BAFA92 /* Main.storyboard */; };
@@ -40,9 +41,10 @@
 		2163B6AE2197AC9800728639 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		2163B6B02197ACAC00728639 /* UpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesViewController.swift; sourceTree = "<group>"; };
 		2163B6B22197ACBD00728639 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		42B3F888219E471E00C69194 /* Utils */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utils; sourceTree = "<group>"; };
+		4213699B21A21B1F003F0032 /* WSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSConstants.swift; sourceTree = "<group>"; };
+		4213699C21A21B1F003F0032 /* UserDefaultConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultConstants.swift; sourceTree = "<group>"; };
+		4213699E21A21B1F003F0032 /* WSUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSUtils.swift; sourceTree = "<group>"; };
 		42B3F88A219E48C300C69194 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
-		42F8CEA221A204DC001A616E /* Constants */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Constants; sourceTree = "<group>"; };
 		42F9EF792192187D00BAFA92 /* Tokachu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tokachu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4213699A21A21B1F003F0032 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4213699B21A21B1F003F0032 /* WSConstants.swift */,
+				4213699C21A21B1F003F0032 /* UserDefaultConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		4213699D21A21B1F003F0032 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4213699E21A21B1F003F0032 /* WSUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		42F9EF702192187D00BAFA92 = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +120,9 @@
 				42F9EF852192187E00BAFA92 /* LaunchScreen.storyboard */,
 				42F9EF882192187E00BAFA92 /* Info.plist */,
 				2163B6AA2197AAF700728639 /* ExploreViewController.swift */,
-				42F8CEA221A204DC001A616E /* Constants */,
+				4213699A21A21B1F003F0032 /* Constants */,
+				4213699D21A21B1F003F0032 /* Utils */,
 				2163B6AC2197AC2500728639 /* FavoriteViewController.swift */,
-				42B3F888219E471E00C69194 /* Utils */,
 				2163B6AE2197AC9800728639 /* AddViewController.swift */,
 				42B3F88A219E48C300C69194 /* Models */,
 				2163B6B02197ACAC00728639 /* UpdatesViewController.swift */,
@@ -192,9 +211,7 @@
 				42B3F88B219E48C300C69194 /* Models in Resources */,
 				42F9EF872192187E00BAFA92 /* LaunchScreen.storyboard in Resources */,
 				42F9EF842192187E00BAFA92 /* Assets.xcassets in Resources */,
-				42B3F889219E471E00C69194 /* Utils in Resources */,
 				2163B6A92197A24400728639 /* README.md in Resources */,
-				42F8CEA321A204DC001A616E /* Constants in Resources */,
 				42F9EF822192187D00BAFA92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,10 +287,13 @@
 				42F9EF7F2192187D00BAFA92 /* LoginViewController.swift in Sources */,
 				211C00F3219E514100EA498D /* Explore.swift in Sources */,
 				2163B6B32197ACBD00728639 /* AccountViewController.swift in Sources */,
+				421369A221A21B1F003F0032 /* WSUtils.swift in Sources */,
 				42F9EF7D2192187D00BAFA92 /* AppDelegate.swift in Sources */,
 				211C00F1219E4AF500EA498D /* ExploreCell.swift in Sources */,
+				421369A021A21B1F003F0032 /* WSConstants.swift in Sources */,
 				211C00EF219E494700EA498D /* ExploreDatasource.swift in Sources */,
 				2163B6AD2197AC2500728639 /* FavoriteViewController.swift in Sources */,
+				421369A121A21B1F003F0032 /* UserDefaultConstants.swift in Sources */,
 				2163B6AB2197AAF700728639 /* ExploreViewController.swift in Sources */,
 				2163B6B12197ACAC00728639 /* UpdatesViewController.swift in Sources */,
 			);
@@ -423,16 +443,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TGUV47EGUU;
+				DEVELOPMENT_TEAM = TDWW635G82;
 				INFOPLIST_FILE = Tokachu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.shaungc;
+				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.yuanzez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -442,16 +462,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TGUV47EGUU;
+				DEVELOPMENT_TEAM = TDWW635G82;
 				INFOPLIST_FILE = Tokachu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.shaungc;
+				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.yuanzez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
