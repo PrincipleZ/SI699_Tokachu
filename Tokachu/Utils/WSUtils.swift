@@ -22,7 +22,7 @@ class WebServiceUtils {
     static let sharedInstance = WebServiceUtils()
     
     private init (){
-        self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        self.dateFormatter.dateFormat = "YYYY-MM-dd HH:mm"
         self.dateFormatter.timeZone = TimeZone(identifier: "UTC")
     }
 
@@ -44,13 +44,13 @@ class WebServiceUtils {
                 success = true
                 if let data = response.result.value{
                     let dictData = data as! NSDictionary
-                    UserDefaults.standard.set(dictData["id"], forKey: UserDefaultConstants.USER_ID )
-                    UserDefaults.standard.set(dictData["first_name"], forKey: UserDefaultConstants.FIRST_NAME )
-                    UserDefaults.standard.set(dictData["last_name"], forKey: UserDefaultConstants.LAST_NAME )
+                    UserDefaults.standard.set(dictData["id"], forKey: UserDefaultsConstants.USER_ID )
+                    UserDefaults.standard.set(dictData["first_name"], forKey: UserDefaultsConstants.FIRST_NAME )
+                    UserDefaults.standard.set(dictData["last_name"], forKey: UserDefaultsConstants.LAST_NAME )
                     if dictData["profile_picture"] is NSNull {
-                        UserDefaults.standard.set(nil, forKey: UserDefaultConstants.PROFILE_PICTURE )
+                        UserDefaults.standard.set(nil, forKey: UserDefaultsConstants.PROFILE_PICTURE )
                     } else {
-                        UserDefaults.standard.set(dictData["profile_picture"], forKey: UserDefaultConstants.PROFILE_PICTURE )
+                        UserDefaults.standard.set(dictData["profile_picture"], forKey: UserDefaultsConstants.PROFILE_PICTURE )
                     }
                 } else {
                     success = false
@@ -65,6 +65,56 @@ class WebServiceUtils {
         }
     }
     
+    func publishEvent(event_name: String, start_time: Date, end_time: Date, place_id: String, description: String, category: String, completion: @escaping (Bool) -> ()){
+        
+        let text_start_time = dateFormatter.string(from: start_time)
+        let text_end_time = dateFormatter.string(from: end_time)
+
+        print(text_start_time)
+        let params = [WSConstants.Params.OWNER_ID: UserDefaults.standard.integer(forKey: UserDefaultsConstants.USER_ID), WSConstants.Params.EVENT_NAME: event_name, WSConstants.Params.START_TIME: text_start_time, WSConstants.Params.END_TIME : text_end_time, WSConstants.Params.PLACE_ID: place_id, WSConstants.Params.DESCRIPTION: description, WSConstants.Params.CATEGORY: category] as [String : Any]
+        Alamofire.request(WSConstants.URL.EVENT, method: .post, parameters: params, encoding: URLEncoding.default).responseJSON{
+            response in
+            print(response.result.value)
+            var success = false
+            switch response.result {
+            case .success:
+                success = true
+                break
+            case .failure(let error):
+                print(self.LOG_TAG)
+                print(error)
+                break
+
+            }
+            completion(success)
+        }
+    }
+    
+    func getCategories(){
+        Alamofire.request(WSConstants.URL.THEME, method: .get, encoding: URLEncoding.default).validate(statusCode: 200..<300).responseJSON{
+            response in
+            switch response.result {
+            case .success:
+                if let data = response.result.value{
+                    var categoryDict = Dictionary<String, Int>()
+                    for i in data as! NSArray{
+                        let temp = (i as! NSDictionary)
+                        let key = temp["theme_name"] as! String
+                        let value = temp["id"] as! NSNumber
+                        categoryDict[key] = value as? Int
+                    }
+                    // use userdefault as temp localstorage
+                    UserDefaults.standard.set(categoryDict, forKey: UserDefaultsConstants.CATEGORY)
+                }
+                break
+            case .failure(let error):
+                print(self.LOG_TAG)
+                print(error)
+                break
+                
+            }
+        }
+    }
     /**
      Handles registration process. Non-empty username should be chekced prior to passing into this function. First bool in completion indicates whether connection was successful and second bool yield to false if the username already exists
      */

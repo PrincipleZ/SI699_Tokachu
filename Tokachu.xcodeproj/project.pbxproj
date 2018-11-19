@@ -20,7 +20,7 @@
 		421369A021A21B1F003F0032 /* WSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699B21A21B1F003F0032 /* WSConstants.swift */; };
 		421369A121A21B1F003F0032 /* UserDefaultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699C21A21B1F003F0032 /* UserDefaultConstants.swift */; };
 		421369A221A21B1F003F0032 /* WSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699E21A21B1F003F0032 /* WSUtils.swift */; };
-		42B3F88B219E48C300C69194 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 42B3F88A219E48C300C69194 /* Models */; };
+		42BFB01021A33FB800B5D37E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BFB00F21A33FB800B5D37E /* Event.swift */; };
 		42F9EF7D2192187D00BAFA92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */; };
 		42F9EF7F2192187D00BAFA92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */; };
 		42F9EF822192187D00BAFA92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F9EF802192187D00BAFA92 /* Main.storyboard */; };
@@ -44,7 +44,7 @@
 		4213699B21A21B1F003F0032 /* WSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSConstants.swift; sourceTree = "<group>"; };
 		4213699C21A21B1F003F0032 /* UserDefaultConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultConstants.swift; sourceTree = "<group>"; };
 		4213699E21A21B1F003F0032 /* WSUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSUtils.swift; sourceTree = "<group>"; };
-		42B3F88A219E48C300C69194 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		42BFB00F21A33FB800B5D37E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		42F9EF792192187D00BAFA92 /* Tokachu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tokachu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +86,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		42BFB00E21A33FA100B5D37E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42BFB00F21A33FB800B5D37E /* Event.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		42F9EF702192187D00BAFA92 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +116,7 @@
 		42F9EF7B2192187D00BAFA92 /* Tokachu */ = {
 			isa = PBXGroup;
 			children = (
+				42BFB00E21A33FA100B5D37E /* Models */,
 				42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */,
 				42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */,
 				42F9EF802192187D00BAFA92 /* Main.storyboard */,
@@ -124,7 +133,6 @@
 				4213699D21A21B1F003F0032 /* Utils */,
 				2163B6AC2197AC2500728639 /* FavoriteViewController.swift */,
 				2163B6AE2197AC9800728639 /* AddViewController.swift */,
-				42B3F88A219E48C300C69194 /* Models */,
 				2163B6B02197ACAC00728639 /* UpdatesViewController.swift */,
 				2163B6B22197ACBD00728639 /* AccountViewController.swift */,
 			);
@@ -208,7 +216,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42B3F88B219E48C300C69194 /* Models in Resources */,
 				42F9EF872192187E00BAFA92 /* LaunchScreen.storyboard in Resources */,
 				42F9EF842192187E00BAFA92 /* Assets.xcassets in Resources */,
 				2163B6A92197A24400728639 /* README.md in Resources */,
@@ -286,6 +293,7 @@
 				2163B6AF2197AC9800728639 /* AddViewController.swift in Sources */,
 				42F9EF7F2192187D00BAFA92 /* LoginViewController.swift in Sources */,
 				211C00F3219E514100EA498D /* Explore.swift in Sources */,
+				42BFB01021A33FB800B5D37E /* Event.swift in Sources */,
 				2163B6B32197ACBD00728639 /* AccountViewController.swift in Sources */,
 				421369A221A21B1F003F0032 /* WSUtils.swift in Sources */,
 				42F9EF7D2192187D00BAFA92 /* AppDelegate.swift in Sources */,

@@ -12,7 +12,8 @@ class WSConstants {
     struct URL {
         static let SERVER = "http://127.0.0.1:8000/"
         static let USER = SERVER + "api/users/"
-        
+        static let EVENT = SERVER + "api/event/"
+        static let THEME = SERVER + "api/theme/"
     }
     
     // JSON params
@@ -39,6 +40,15 @@ class WSConstants {
         
         static let UUID = "uuid"
         static let USER_ID = "id"
+        
+        static let EVENT_NAME = "name"
+        static let START_TIME = "start_time"
+        static let END_TIME = "end_time"
+        static let PLACE_ID = "place_id"
+        static let DESCRIPTION = "description"
+        static let OWNER_ID = "owner_id"
+        static let CATEGORY = "category"
+        
     }
     
     
