@@ -21,6 +21,8 @@ class ExploreCell: UICollectionViewCell {
     }
     
     func fill(with explore: Explore) {
-        
+        titleLabel.text = explore.title
+        locationLabel.text = explore.location
+        imageView.image = explore.image
     }
 }

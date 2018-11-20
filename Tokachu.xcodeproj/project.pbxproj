@@ -61,6 +61,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21E6C6FB21A393EE008F20C1 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				211C00EC219E491200EA498D /* ExplorePresenter.swift */,
+				211C00EE219E494700EA498D /* ExploreDatasource.swift */,
+				211C00F0219E4AF500EA498D /* ExploreCell.swift */,
+				211C00F2219E514100EA498D /* Explore.swift */,
+				2163B6AA2197AAF700728639 /* ExploreViewController.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
 		42F9EF702192187D00BAFA92 = {
 			isa = PBXGroup;
 			children = (
@@ -86,15 +98,11 @@
 				42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */,
 				42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */,
 				42F9EF802192187D00BAFA92 /* Main.storyboard */,
-				211C00EC219E491200EA498D /* ExplorePresenter.swift */,
-				211C00EE219E494700EA498D /* ExploreDatasource.swift */,
-				211C00F0219E4AF500EA498D /* ExploreCell.swift */,
-				211C00F2219E514100EA498D /* Explore.swift */,
+				21E6C6FB21A393EE008F20C1 /* Explore */,
 				2163B6A82197A24400728639 /* README.md */,
 				42F9EF832192187E00BAFA92 /* Assets.xcassets */,
 				42F9EF852192187E00BAFA92 /* LaunchScreen.storyboard */,
 				42F9EF882192187E00BAFA92 /* Info.plist */,
-				2163B6AA2197AAF700728639 /* ExploreViewController.swift */,
 				2163B6AC2197AC2500728639 /* FavoriteViewController.swift */,
 				2163B6AE2197AC9800728639 /* AddViewController.swift */,
 				2163B6B02197ACAC00728639 /* UpdatesViewController.swift */,

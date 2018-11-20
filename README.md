@@ -12,7 +12,8 @@
 ## TODO
 
 - [ ] How to dynamic button
-- [ ] How to collection: [testing collectionview from a video tutorial](https://www.youtube.com/watch?v=_8_UsVoSfZE)
+- [x] How to collection: [testing collectionview from a video tutorial](https://www.youtube.com/watch?v=_8_UsVoSfZE)
+  - Also how to set round border, margin, see the video for detail
 
 - [x] Concerns: how to deal with multiple teammembers [editing the same storyboard](https://www.marinosoftware.com/insights/storyboards-multiple-developers-and-git).
   - --> unless you're working on the **same view controller & more than one change**, otherwise it can auto merge most of the time

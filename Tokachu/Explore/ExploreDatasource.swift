@@ -14,7 +14,12 @@ class ExploreDatasource: NSObject, UICollectionViewDataSource {
     
     // Mark: mock data
     func fill() {
-//        objects = [Explore(title: "Happy Hour", location: "North Quad", image: UIImage(name: ""))]
+        objects = []
+        for i in 1...10 {
+            objects.append(
+                Explore(title: "Happy Hour \(i)", location: "Law School", image: UIImage(named: "event-image-placeholder")!)
+            )
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -23,6 +28,9 @@ class ExploreDatasource: NSObject, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ExploreCell
+        
+        let explore = objects[indexPath.item]
+        cell.fill(with: explore)
         return cell
     }
 
