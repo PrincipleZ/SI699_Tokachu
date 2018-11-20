@@ -87,17 +87,23 @@
 			sourceTree = "<group>";
 		};
 		42BFB00E21A33FA100B5D37E /* Models */ = {
+            isa = PBXGroup;
+            children = (
+                42BFB00F21A33FB800B5D37E /* Event.swift */,
+            );
+			path = Models;
+            sourceTree = "<group>";
+        };
 		21E6C6FB21A393EE008F20C1 /* Explore */ = {
             isa = PBXGroup;
             children = (
-				42BFB00F21A33FB800B5D37E /* Event.swift */,
+				
 				211C00EC219E491200EA498D /* ExplorePresenter.swift */,
 				211C00EE219E494700EA498D /* ExploreDatasource.swift */,
 				211C00F0219E4AF500EA498D /* ExploreCell.swift */,
 				211C00F2219E514100EA498D /* Explore.swift */,
 				2163B6AA2197AAF700728639 /* ExploreViewController.swift */,
             );
-			path = Models;
 			path = Explore;
             sourceTree = "<group>";
         };
@@ -132,7 +138,7 @@
                 42F9EF832192187E00BAFA92 /* Assets.xcassets */,
                 42F9EF852192187E00BAFA92 /* LaunchScreen.storyboard */,
                 42F9EF882192187E00BAFA92 /* Info.plist */,
-                2163B6AA2197AAF700728639 /* ExploreViewController.swift */,
+                // 2163B6AA2197AAF700728639 /* ExploreViewController.swift */,
                 4213699A21A21B1F003F0032 /* Constants */,
                 4213699D21A21B1F003F0032 /* Utils */,
                 2163B6AC2197AC2500728639 /* FavoriteViewController.swift */,
@@ -235,8 +241,7 @@
             buildActionMask = 2147483647;
             files = (
             );
-            inputFileListPaths = (
-            );
+            // inputFileListPaths = ();
             inputPaths = (
                 "${SRCROOT}/Pods/Target Support Files/Pods-Tokachu/Pods-Tokachu-frameworks.sh",
                 "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
@@ -248,8 +253,7 @@
                 "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
             );
             name = "[CP] Embed Pods Frameworks";
-            outputFileListPaths = (
-            );
+            // outputFileListPaths = ();
             outputPaths = (
                 "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
                 "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
