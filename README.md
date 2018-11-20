@@ -11,7 +11,7 @@
 
 ## TODO
 
-- [ ] How to dynamic button
+- [ ] Redefine
 - [x] How to collection: [testing collectionview from a video tutorial](https://www.youtube.com/watch?v=_8_UsVoSfZE)
   - Also how to set round border, margin, see the video for detail
 
