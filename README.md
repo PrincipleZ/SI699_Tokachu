@@ -22,6 +22,10 @@
 - ~~Create a clickable item in create account page nav, in order to `next` to next onboarding step.~~
 - ~~Fix tab views title disappeared because there's a nav view at login/welcome overlaying.~~
 
+## Collaboration Protocol
+
+- If you add/remove file in Xcode, create pull request or let your team mate get updated by `git pull` **right away**; the `.pbxproj` merge conflict is not fun at all.
+
 ## Reference
 
 - [This Repo URL](https://github.com/PrincipleZ/SI699_Tokachu)
