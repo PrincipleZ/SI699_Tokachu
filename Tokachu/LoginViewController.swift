@@ -8,21 +8,39 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
-    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.hideKeyboardWhenTappedAround()
+        passwordTextField.tag = 1
+        
     }
 
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let nextTag = textField.tag + 1
+        // Try to find next responder
+        let nextResponder = textField.superview?.viewWithTag(nextTag)
+        
+        if nextResponder != nil {
+            // Found next responder, so set it
+            nextResponder?.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard
+            textField.resignFirstResponder()
+        }
+        
+        return false
+    }
+    
     @IBAction func loginTapped(_ sender: Any) {
-        WebServiceUtils.sharedInstance.logIn(username: usernameTextField.text!, password: passwordTextField.text!, completion: {success, msg in
+        WebServiceUtils.sharedInstance.logIn(email: emailTextField.text!, password: passwordTextField.text!, completion: {success, msg in
             if !success{
                 self.errorLabel.text = msg
             }
