@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -18,6 +19,9 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var endTime: UIDatePicker!
     @IBOutlet weak var eventDescription: UITextView!
     @IBOutlet weak var categoryPicker: UIPickerView!
+    
+    var newEvent: Explore?
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,14 +64,31 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.selectedRow = row
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        super.prepare(for: segue, sender: sender)
+        
+        // Configure the destination view controller only when the save button is pressed.
+        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+            os_log("", log: OSLog.default, type: .debug)
+            return
+        }
+        
+        
+        if let
+            eventTitle = self.eventTitle.text,
+            let eventLocation = self.eventLocation.text {
+            self.newEvent = Explore(title: eventTitle, location: eventLocation, image: UIImage(named: "event-image-placeholder")!)
+        }
+        
+        
     }
-    */
+
 
 }
