@@ -30,6 +30,6 @@ class ExploreViewController: UIViewController {
     
     func setup() {
         collectionView.dataSource = datasource
-        collectionView.delegate = presenter as! UICollectionViewDelegate
+        collectionView.delegate = presenter as UICollectionViewDelegate
     }
 }

@@ -71,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21A5D5C421AB21210069B9A3 /* CreateEvent */ = {
+			isa = PBXGroup;
+			children = (
+				2163B6AE2197AC9800728639 /* AddViewController.swift */,
+			);
+			path = CreateEvent;
+			sourceTree = "<group>";
+		};
 		21E6C6FB21A393EE008F20C1 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +151,7 @@
 				4213699A21A21B1F003F0032 /* Constants */,
 				4213699D21A21B1F003F0032 /* Utils */,
 				2163B6AC2197AC2500728639 /* FavoriteViewController.swift */,
-				2163B6AE2197AC9800728639 /* AddViewController.swift */,
+				21A5D5C421AB21210069B9A3 /* CreateEvent */,
 				2163B6B02197ACAC00728639 /* UpdatesViewController.swift */,
 				2163B6B22197ACBD00728639 /* AccountViewController.swift */,
 			);
