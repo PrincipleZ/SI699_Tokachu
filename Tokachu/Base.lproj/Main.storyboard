@@ -300,7 +300,11 @@
                         <viewLayoutGuide key="safeArea" id="wlS-b5-CEg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Event" id="CUB-I0-Qag">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PiF-dp-D1h"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PiF-dp-D1h">
+                            <connections>
+                                <action selector="cancel:" destination="M2N-Hz-lt9" id="6e8-1O-VDO"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="hoi-Oe-W4b">
                             <connections>
                                 <segue destination="YqF-km-yvm" kind="unwind" unwindAction="unwindToExploreListWithSender:" id="cIW-hZ-KC9"/>

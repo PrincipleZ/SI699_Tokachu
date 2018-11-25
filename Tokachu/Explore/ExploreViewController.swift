@@ -38,7 +38,7 @@ class ExploreViewController: UIViewController {
         if let sourceViewController = sender.source as? AddViewController, let newExplore = sourceViewController.newEvent {
             // TODO: need to insert explore
             self.collectionView.performBatchUpdates({
-                let newExploreIndexPath = IndexPath(row: 1, section: 0)
+                let newExploreIndexPath = IndexPath(row: self.datasource.objects.count, section: 0)
                 self.datasource.objects.append(newExplore)
                 collectionView.insertItems(at: [newExploreIndexPath])
             }, completion: nil)

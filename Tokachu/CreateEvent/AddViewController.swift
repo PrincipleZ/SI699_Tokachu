@@ -65,6 +65,11 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         self.selectedRow = row
     }
     
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -82,8 +87,8 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         
         
         if let
-            eventTitle = self.eventTitle.text,
-            let eventLocation = self.eventLocation.text {
+            eventTitle = self.eventTitle.text, eventTitle != "",
+            let eventLocation = self.eventLocation.text, eventLocation != "" {
             self.newEvent = Explore(title: eventTitle, location: eventLocation, image: UIImage(named: "event-image-placeholder")!)
         }
         

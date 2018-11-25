@@ -15,11 +15,11 @@ class ExploreDatasource: NSObject, UICollectionViewDataSource {
     // Mark: mock data
     func fill() {
         objects = []
-        for i in 1...10 {
-            objects.append(
-                Explore(title: "Happy Hour \(i)", location: "Law School", image: UIImage(named: "event-image-placeholder")!)
-            )
-        }
+//        for i in 1...10 {
+//            objects.append(
+//                Explore(title: "Mock Data Happy Hour \(i)", location: "Law School", image: UIImage(named: "event-image-placeholder")!)
+//            )
+//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

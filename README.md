@@ -2,7 +2,11 @@
 
 ## TODO
 
+- Redefine
+- (optional) let the save button disabled if nothing input in create event page.
+
 - [ ] A modal view: [creating an item](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/ImplementNavigation.html#//apple_ref/doc/uid/TP40015214-CH16-SW1)
+  - Including save, cancel segue, and more!
 - [x] How to collection: [testing collectionview from a video tutorial](https://www.youtube.com/watch?v=_8_UsVoSfZE)
   - Also how to set round border, margin, see the video for detail
 
