@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         WebServiceUtils.sharedInstance.getCategories()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm"
+        WebServiceUtils.sharedInstance.searchEvent(category: ["2"], start_time: dateFormatter.date(from: "2018-11-18 11:11")!, end_time: dateFormatter.date(from: "2018-11-22 11:11")!, completion: {(a, b) in
+           print(b) })
         return true
     }
 

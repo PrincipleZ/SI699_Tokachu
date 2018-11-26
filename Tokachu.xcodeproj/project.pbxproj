@@ -20,6 +20,7 @@
 		421369A021A21B1F003F0032 /* WSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699B21A21B1F003F0032 /* WSConstants.swift */; };
 		421369A121A21B1F003F0032 /* UserDefaultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699C21A21B1F003F0032 /* UserDefaultConstants.swift */; };
 		421369A221A21B1F003F0032 /* WSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699E21A21B1F003F0032 /* WSUtils.swift */; };
+		421C838821AA08A8008EA574 /* searchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C838721AA08A8008EA574 /* searchResultController.swift */; };
 		42ADDE0021A9CAA9007667CB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADDDFF21A9CAA9007667CB /* RegisterViewController.swift */; };
 		42BFB01021A33FB800B5D37E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BFB00F21A33FB800B5D37E /* Event.swift */; };
 		42F9EF7D2192187D00BAFA92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 		4213699B21A21B1F003F0032 /* WSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSConstants.swift; sourceTree = "<group>"; };
 		4213699C21A21B1F003F0032 /* UserDefaultConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultConstants.swift; sourceTree = "<group>"; };
 		4213699E21A21B1F003F0032 /* WSUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSUtils.swift; sourceTree = "<group>"; };
+		421C838721AA08A8008EA574 /* searchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchResultController.swift; sourceTree = "<group>"; };
 		42ADDDFF21A9CAA9007667CB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		42BFB00F21A33FB800B5D37E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		42F9EF792192187D00BAFA92 /* Tokachu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tokachu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 				42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */,
 				42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */,
 				42F9EF802192187D00BAFA92 /* Main.storyboard */,
+				421C838721AA08A8008EA574 /* searchResultController.swift */,
 				42ADDDFF21A9CAA9007667CB /* RegisterViewController.swift */,
 				21E6C6FB21A393EE008F20C1 /* Explore */,
 				2163B6A82197A24400728639 /* README.md */,
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				421C838821AA08A8008EA574 /* searchResultController.swift in Sources */,
 				211C00ED219E491200EA498D /* ExplorePresenter.swift in Sources */,
 				2163B6AF2197AC9800728639 /* AddViewController.swift in Sources */,
 				42F9EF7F2192187D00BAFA92 /* LoginViewController.swift in Sources */,

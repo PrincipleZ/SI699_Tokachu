@@ -28,7 +28,7 @@ class WebServiceUtils {
 
     func logIn(email: String, password: String, completion: @escaping (Bool, String) -> ()){
         let params = [WSConstants.Params.EMAIL: email, WSConstants.Params.PASSWORD: password]
-        Alamofire.request(WSConstants.URL.USER+"1/log_in/", method: .post, parameters: params, encoding: URLEncoding.default).responseJSON{
+        Alamofire.request(WSConstants.URL.USER+"log_in/", method: .post, parameters: params, encoding: URLEncoding.default).responseJSON{
             response in
             var success = false
             var errorMsg = ""
@@ -149,6 +149,28 @@ class WebServiceUtils {
                 break
             }
             completion(success, errorMsg)
+        }
+        
+    }
+    
+    func searchEvent(category: [String], start_time: Date, end_time: Date, completion: @escaping (Bool, [Event]) -> ()){
+        print(category.joined(separator: ","))
+        let text_start_time = dateFormatter.string(from: start_time)
+        let text_end_time = dateFormatter.string(from: end_time)
+
+        let params = [WSConstants.Params.CATEGORY: category.joined(separator: ","), WSConstants.Params.START_TIME: text_start_time, WSConstants.Params.END_TIME: text_end_time]
+        Alamofire.request(WSConstants.URL.EVENT + "search/", method: .get, parameters: params, encoding: URLEncoding.default).validate(statusCode: 200..<300).responseJSON{
+            response in
+            switch response.result {
+            case .success:
+                print(response.result.value)
+                break
+            case .failure(let error):
+                print(self.LOG_TAG)
+                print(error)
+                break
+                
+            }
         }
         
     }
