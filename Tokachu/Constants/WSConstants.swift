@@ -37,7 +37,7 @@ class WSConstants {
         static let FIRST_NAME = "first_name"
         static let LAST_NAME = "last_name"
         static let EMAIL = "email"
-        
+        static let TERM = "term"
         static let UUID = "uuid"
         static let USER_ID = "id"
         

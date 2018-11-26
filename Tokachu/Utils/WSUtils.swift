@@ -153,12 +153,12 @@ class WebServiceUtils {
         
     }
     
-    func searchEvent(category: [String], start_time: Date, end_time: Date, completion: @escaping (Bool, [Event]) -> ()){
-        print(category.joined(separator: ","))
+    func searchEvent(searchTerm: String, category: [String], start_time: Date, end_time: Date, completion: @escaping (Bool, [Event]) -> ()){
+        let category_string = category.isEmpty ? "" : category.joined(separator: ",")
         let text_start_time = dateFormatter.string(from: start_time)
         let text_end_time = dateFormatter.string(from: end_time)
 
-        let params = [WSConstants.Params.CATEGORY: category.joined(separator: ","), WSConstants.Params.START_TIME: text_start_time, WSConstants.Params.END_TIME: text_end_time]
+        let params = [WSConstants.Params.TERM: searchTerm, WSConstants.Params.CATEGORY: category_string, WSConstants.Params.START_TIME: text_start_time, WSConstants.Params.END_TIME: text_end_time]
         Alamofire.request(WSConstants.URL.EVENT + "search/", method: .get, parameters: params, encoding: URLEncoding.default).validate(statusCode: 200..<300).responseJSON{
             response in
             switch response.result {
