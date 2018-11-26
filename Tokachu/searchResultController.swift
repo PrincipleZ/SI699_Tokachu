@@ -19,8 +19,8 @@ class searchResultController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dateFormatter.dateFormat = "YYYY-MM-dd HH:mm"
-        self.dateFormatter.timeZone = TimeZone(identifier: "UTC")
-        
+        self.dateFormatter.timeZone = TimeZone(identifier: String (TimeZone.current.identifier))
+        hideDatePicker()
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -64,16 +64,17 @@ class searchResultController: UITableViewController {
     @objc func time_picker(sender: UIButton!) {
         self.senderTag = sender.tag
         if (self.timePicker == nil){
-            let picker : UIDatePicker = UIDatePicker()
-            picker.datePickerMode = UIDatePicker.Mode.dateAndTime
-            let pickerSize = picker.sizeThatFits(CGSize(width: self.view!.frame.width, height: self.view!.frame.height) )
-            print(self.view!.frame.width)
-            print(pickerSize.width)
+            self.timePicker = UIDatePicker()
+            self.timePicker!.datePickerMode = UIDatePicker.Mode.dateAndTime
+            let pickerSize = self.timePicker!.sizeThatFits(CGSize(width: self.view!.frame.width, height: self.view!.frame.height))
             
-            picker.addTarget(self, action: #selector(changeTime(sender:)), for: UIControl.Event.valueChanged)
-            picker.frame = CGRect(x:0.0, y:250, width:pickerSize.width, height:460)
-            self.timePicker = picker
-            self.view.addSubview(picker)
+            self.timePicker!.addTarget(self, action: #selector(changeTime(sender:)), for: UIControl.Event.valueChanged)
+            self.timePicker!.date = dateFormatter.date(from: sender.currentTitle!)!
+            self.timePicker!.frame = CGRect(x:0 , y:self.view!.frame.height - pickerSize.height - self.view!.safeAreaInsets.top - self.view!.safeAreaInsets.bottom, width:self.view!.frame.width, height:pickerSize.height)
+            self.timePicker?.minimumDate = start_time
+            self.timePicker!.backgroundColor = UIColor.white
+            self.timePicker!.tag = 100
+            self.view.addSubview(self.timePicker!)
             
         }
     }
@@ -88,5 +89,20 @@ class searchResultController: UITableViewController {
             self.end_time_button.setTitle(dateFormatter.string(from: end_time), for: .normal)
         }
         
+    }
+    
+    func hideDatePicker(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hidePicker(sender:)))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hidePicker(sender:UIDatePicker){
+        if (self.timePicker != nil){
+            if let viewWithTag = self.view.viewWithTag(100) {
+                viewWithTag.removeFromSuperview()
+            }
+            self.timePicker = nil
+        }
     }
 }
