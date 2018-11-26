@@ -22,6 +22,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.tag = 1
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        [self.emailTextField .becomeFirstResponder()]
+    }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let nextTag = textField.tag + 1

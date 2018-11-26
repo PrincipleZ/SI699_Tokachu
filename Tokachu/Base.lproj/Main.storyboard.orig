@@ -186,7 +186,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cht-ba-4U4">
+<<<<<<< HEAD
+                                <rect key="frame" x="0.0" y="116" width="375" height="1335"/>
+=======
                                 <rect key="frame" x="0.0" y="64" width="375" height="1436"/>
+>>>>>>> f543562712f5959b29ce593cb8beed91e4587f5e
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bmw-SV-3OG">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
