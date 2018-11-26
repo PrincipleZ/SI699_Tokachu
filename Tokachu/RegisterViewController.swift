@@ -13,6 +13,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var emailAddress: UITextField!
+    @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var passwordConfirm: UITextField!
     @IBOutlet weak var errorMsg: UILabel!
@@ -23,6 +24,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         firstName.delegate = self
         lastName.delegate = self
         emailAddress.delegate = self
+        userName.delegate = self
         password.delegate = self
         passwordConfirm.delegate = self
         setUpTextFieldTags()
@@ -59,11 +61,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         firstName.tag = 0
         lastName.tag = 1
         emailAddress.tag = 2
+        userName.tag = 5
         password.tag = 3
         passwordConfirm.tag = 4
     }
     @IBAction func register(_ sender: Any) {
-        if firstName.text == "" || lastName.text == "" || emailAddress.text == "" || password.text == "" || passwordConfirm.text == "" {
+        if firstName.text == "" || lastName.text == "" || emailAddress.text == "" || password.text == "" || passwordConfirm.text == "" || userName.text == "" {
             errorMsg.text = "Some fields are missing"
             return
         }
@@ -72,7 +75,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             return
         }
         errorMsg.text = ""
-        WebServiceUtils.sharedInstance.register(firstName: firstName.text!, lastName: lastName.text!, email: emailAddress.text!, password: password.text!, completion: {(success, error) in
+        WebServiceUtils.sharedInstance.register(firstName: firstName.text!, lastName: lastName.text!, email: emailAddress.text!, password: password.text!, userName: userName.text!, completion: {(success, error) in
             if !success {
                 self.errorMsg.text = error
             } else {
