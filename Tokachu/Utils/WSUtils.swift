@@ -116,8 +116,8 @@ class WebServiceUtils {
         }
     }
     
-    func register(firstName: String, lastName: String, email: String, password: String, completion: @escaping (Bool, String) -> ()) {
-        let params = [WSConstants.Params.LAST_NAME: lastName, WSConstants.Params.FIRST_NAME: firstName, WSConstants.Params.EMAIL: email, WSConstants.Params.PASSWORD: password]
+    func register(firstName: String, lastName: String, email: String, password: String, userName: String, completion: @escaping (Bool, String) -> ()) {
+        let params = [WSConstants.Params.LAST_NAME: lastName, WSConstants.Params.FIRST_NAME: firstName, WSConstants.Params.EMAIL: email, WSConstants.Params.PASSWORD: password, WSConstants.Params.USERNAME: userName]
         Alamofire.request(WSConstants.URL.USER, method: .post, parameters: params, encoding: URLEncoding.default).responseJSON{
             response in
             print(response.result.value)
