@@ -28,16 +28,20 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UISearchBar
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupSearchControl()
+    }
+    
+    func setupSearchControl() {
         resultView = searchResultController()
         searchController = UISearchController(searchResultsController: resultView)
         resultView.tableView.delegate = self
         resultView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
         resultView.delegate = self
-        print("here1")
+        
         self.searchController.searchResultsUpdater = self
         self.searchController.searchBar.delegate = self
         self.searchController.searchBar.autocapitalizationType = .none
-
+        
         self.definesPresentationContext = true
         if #available(iOS 11.0, *) {
             // For iOS 11 and later, place the search bar in the navigation bar.
@@ -50,8 +54,6 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UISearchBar
             self.eventTable.tableHeaderView = searchController.searchBar
         }
     }
-    
-
     func performSearch() {
         WebServiceUtils.sharedInstance.searchEvent(searchTerm: self.searchText, category: self.categories, start_time: self.start_time, end_time: self.end_time, completion: {(a, b) in
             print(b) })
