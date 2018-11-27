@@ -26,7 +26,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UISearchBarD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Explore Events"
+        title = "Explore (hard-coded)"
         
         setup()
         
