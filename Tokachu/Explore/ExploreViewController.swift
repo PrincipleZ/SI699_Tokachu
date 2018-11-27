@@ -20,7 +20,7 @@ class ExploreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Explore Events"
+        title = "Explore (hard-coded)"
         
         setup()
         
