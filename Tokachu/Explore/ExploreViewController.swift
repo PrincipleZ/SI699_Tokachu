@@ -33,7 +33,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UISearchBarD
         datasource.fill()
         collectionView.reloadData()
         
-//        setupSearchControl() // conflict w/ collectiveView
+        setupSearchControl()
     }
     
     func setupSearchControl() {
