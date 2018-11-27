@@ -26,14 +26,14 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UISearchBarD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Explore (hard-coded)--"
+        title = "Explore"
         
         setup()
         
         datasource.fill()
         collectionView.reloadData()
         
-        setupSearchControl()
+//        setupSearchControl() // conflict w/ collectiveView
     }
     
     func setupSearchControl() {

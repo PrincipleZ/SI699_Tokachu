@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wTZ-Yr-uEY">
-                                <rect key="frame" x="0.0" y="172" width="375" height="446"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wTZ-Yr-uEY">
+                                <rect key="frame" x="0.0" y="116" width="375" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L2N-EP-cmd">
                                     <size key="itemSize" width="375" height="126"/>
@@ -92,6 +92,7 @@
                             <constraint firstItem="wTZ-Yr-uEY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GY4-PK-cRq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wTZ-Yr-uEY" secondAttribute="bottom" id="OPN-8i-3FB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wTZ-Yr-uEY" secondAttribute="trailing" id="ggQ-Mu-yJI"/>
+                            <constraint firstItem="wTZ-Yr-uEY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="k2O-Ee-uOi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -157,7 +158,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cht-ba-4U4">
-                                <rect key="frame" x="0.0" y="64" width="375" height="1436"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="1335"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bmw-SV-3OG">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
@@ -789,6 +790,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="SXD-WV-62r"/>
         <segue reference="rsT-AV-g7E"/>
-        <segue reference="9jY-iT-dfC"/>
+        <segue reference="lZQ-5x-S4b"/>
     </inferredMetricsTieBreakers>
 </document>
