@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import os.log
 
 class ExploreViewController: UIViewController, UITableViewDelegate, UISearchBarDelegate, UISearchResultsUpdating, eventSearchDelegate {
     
@@ -67,13 +68,20 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UISearchBarD
     
     //MARK: Actions
     @IBAction func unwindToExploreList(sender: UIStoryboardSegue) {
-        if let sourceViewController = sender.source as? AddViewController, let newExplore = sourceViewController.newEvent {
-            // TODO: need to insert explore
-            self.collectionView.performBatchUpdates({
-                let newExploreIndexPath = IndexPath(row: self.datasource.objects.count, section: 0)
-                self.datasource.objects.append(newExplore)
-                collectionView.insertItems(at: [newExploreIndexPath])
-            }, completion: nil)
+        if let sourceViewController = sender.source as? AddViewController,
+            let incomingExplore = sourceViewController.explore {
+            if let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first  {
+                self.datasource.objects[selectedIndexPath.row] = incomingExplore
+                self.collectionView.reloadItems(at: [selectedIndexPath])
+                
+            }
+            else {
+                self.collectionView.performBatchUpdates({
+                    let newExploreIndexPath = IndexPath(row: self.datasource.objects.count, section: 0)
+                    self.datasource.objects.append(incomingExplore)
+                    collectionView.insertItems(at: [newExploreIndexPath])
+                }, completion: nil)
+            }
         }
         
 
@@ -100,5 +108,30 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UISearchBarD
         self.start_time = start_time
         self.end_time = end_time
         performSearch()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        switch segue.identifier  ?? "" {
+        case "AddExplore":
+            os_log("Adding new explore event", log: OSLog.default, type: .debug)
+        case "ShowExploreDetail":
+            guard let exploreDetailViewController = segue.destination as? AddViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedExploreCell = sender as? ExploreCell  else {
+                fatalError("Unexpected sender: \(sender ?? "")")
+            }
+            
+            guard let indexPath = collectionView.indexPath(for: selectedExploreCell) else {
+                fatalError("The selected cell is not being displayed by the collectionView")
+            }
+            
+            let selectedExplore = self.datasource.objects[indexPath.row]
+            exploreDetailViewController.explore = selectedExplore
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier ?? "empty segue identifier")")
+        }
     }
 }

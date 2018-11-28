@@ -15,12 +15,13 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var eventTitle: UITextField!
     @IBOutlet weak var eventLocation: UITextField!
+    @IBOutlet weak var exploreImage: UIImageView!
     @IBOutlet weak var startTime: UIDatePicker!
     @IBOutlet weak var endTime: UIDatePicker!
     @IBOutlet weak var eventDescription: UITextView!
     @IBOutlet weak var categoryPicker: UIPickerView!
     
-    var newEvent: Explore?
+    var explore: Explore?
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -32,13 +33,20 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         scrollView.keyboardDismissMode = .onDrag
         self.categoryText = Array(self.categoryData.keys)
         
+        // reuse for udpate explore view
+        if let explore = explore {
+            eventTitle.text = explore.title
+            eventLocation.text = explore.location
+            exploreImage.image = explore.image
+        }
+        
     }
     let categoryData = UserDefaults.standard.object(forKey: UserDefaultsConstants.CATEGORY) as! Dictionary<String, Int>
     var categoryText = Array<String>()
     var selectedRow = 0
     @IBAction func publishEvent(_ sender: Any) {
         let category_id = self.categoryData[self.categoryText[self.selectedRow]]
-        print(category_id)
+        print(category_id ?? -1)
         WebServiceUtils.sharedInstance.publishEvent(event_name: eventTitle.text!, start_time: startTime.date, end_time: endTime.date, place_id: eventLocation.text!, description: eventDescription.text!, category: String(category_id!), completion: {success in
             if success{
                 print("Successfully published the event")
@@ -89,7 +97,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         if let
             eventTitle = self.eventTitle.text, eventTitle != "",
             let eventLocation = self.eventLocation.text, eventLocation != "" {
-            self.newEvent = Explore(title: eventTitle, location: eventLocation, image: UIImage(named: "event-image-placeholder")!)
+            self.explore = Explore(title: eventTitle, location: eventLocation, image: UIImage(named: "event-image-placeholder")!)
         }
         
         

@@ -81,7 +81,7 @@
                                             <outlet property="imageView" destination="XGc-Cb-S3i" id="BTr-f6-3hZ"/>
                                             <outlet property="locationLabel" destination="yEb-Xo-4yy" id="2qZ-7G-vh5"/>
                                             <outlet property="titleLabel" destination="2lJ-GI-nRa" id="xZi-uS-uWK"/>
-                                            <segue destination="M2N-Hz-lt9" kind="show" id="lZQ-5x-S4b"/>
+                                            <segue destination="M2N-Hz-lt9" kind="show" identifier="ShowExploreDetail" id="lZQ-5x-S4b"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -99,7 +99,7 @@
                     <navigationItem key="navigationItem" title="Explore" id="hxs-fG-NbT">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VC2-Jo-dUL">
                             <connections>
-                                <segue destination="beM-VK-zXh" kind="presentation" identifier="AddEvent" id="qZw-zh-uVp"/>
+                                <segue destination="beM-VK-zXh" kind="presentation" identifier="AddExplore" id="qZw-zh-uVp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -312,6 +312,8 @@
                         <outlet property="eventDescription" destination="RRp-ml-h9r" id="bcf-tT-tm6"/>
                         <outlet property="eventLocation" destination="NrB-87-poH" id="Y3I-Ux-p9Q"/>
                         <outlet property="eventTitle" destination="Mdz-cn-LyI" id="HNn-u4-V0m"/>
+                        <outlet property="exploreImage" destination="Zf8-Qy-klr" id="5Lf-fS-7G1"/>
+                        <outlet property="saveButton" destination="hoi-Oe-W4b" id="aOC-y1-96P"/>
                         <outlet property="scrollView" destination="cht-ba-4U4" id="eJM-v1-8aZ"/>
                         <outlet property="startTime" destination="cLX-bo-b4o" id="zhg-tp-rf4"/>
                     </connections>

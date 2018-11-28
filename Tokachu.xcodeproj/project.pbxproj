@@ -471,13 +471,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TDWW635G82;
+				DEVELOPMENT_TEAM = TGUV47EGUU;
 				INFOPLIST_FILE = Tokachu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.yuanzez;
+				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.shaungc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -490,13 +490,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TDWW635G82;
+				DEVELOPMENT_TEAM = TGUV47EGUU;
 				INFOPLIST_FILE = Tokachu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.yuanzez;
+				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.shaungc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
