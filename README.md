@@ -30,5 +30,8 @@
 
 ## Reference
 
+- How to store and access and share data between different view controllers?
+  - [This Stackoverflow Post: How do you share data between view controllers and other objects in Swift?](https://stackoverflow.com/questions/29734954/how-do-you-share-data-between-view-controllers-and-other-objects-in-swift)
+  - [ReSwift Github repo](https://github.com/ReSwift/ReSwift)
 - [This Repo URL](https://github.com/PrincipleZ/SI699_Tokachu)
 - [Standford iOS Dev Course](https://www.youtube.com/watch?v=B281mrPUGjg)
