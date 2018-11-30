@@ -17,6 +17,7 @@
 		2163B6AF2197AC9800728639 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163B6AE2197AC9800728639 /* AddViewController.swift */; };
 		2163B6B12197ACAC00728639 /* UpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163B6B02197ACAC00728639 /* UpdatesViewController.swift */; };
 		2163B6B32197ACBD00728639 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2163B6B22197ACBD00728639 /* AccountViewController.swift */; };
+		21EEEC2E21B0E76D00A0ADF4 /* ExploreCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EEEC2D21B0E76D00A0ADF4 /* ExploreCollectionViewController.swift */; };
 		421369A021A21B1F003F0032 /* WSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699B21A21B1F003F0032 /* WSConstants.swift */; };
 		421369A121A21B1F003F0032 /* UserDefaultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699C21A21B1F003F0032 /* UserDefaultConstants.swift */; };
 		421369A221A21B1F003F0032 /* WSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699E21A21B1F003F0032 /* WSUtils.swift */; };
@@ -43,6 +44,7 @@
 		2163B6AE2197AC9800728639 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		2163B6B02197ACAC00728639 /* UpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesViewController.swift; sourceTree = "<group>"; };
 		2163B6B22197ACBD00728639 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		21EEEC2D21B0E76D00A0ADF4 /* ExploreCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionViewController.swift; sourceTree = "<group>"; };
 		4213699B21A21B1F003F0032 /* WSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSConstants.swift; sourceTree = "<group>"; };
 		4213699C21A21B1F003F0032 /* UserDefaultConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultConstants.swift; sourceTree = "<group>"; };
 		4213699E21A21B1F003F0032 /* WSUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSUtils.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				211C00F0219E4AF500EA498D /* ExploreCell.swift */,
 				211C00F2219E514100EA498D /* Explore.swift */,
 				2163B6AA2197AAF700728639 /* ExploreViewController.swift */,
+				21EEEC2D21B0E76D00A0ADF4 /* ExploreCollectionViewController.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			files = (
 				421C838821AA08A8008EA574 /* searchResultController.swift in Sources */,
 				211C00ED219E491200EA498D /* ExplorePresenter.swift in Sources */,
+				21EEEC2E21B0E76D00A0ADF4 /* ExploreCollectionViewController.swift in Sources */,
 				2163B6AF2197AC9800728639 /* AddViewController.swift in Sources */,
 				42F9EF7F2192187D00BAFA92 /* LoginViewController.swift in Sources */,
 				211C00F3219E514100EA498D /* Explore.swift in Sources */,

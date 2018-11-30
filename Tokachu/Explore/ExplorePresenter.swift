@@ -27,4 +27,5 @@ class ExplorePresenter: NSObject, UICollectionViewDelegate, UICollectionViewDele
             height: 92.0
         )
     }
+    
 }
