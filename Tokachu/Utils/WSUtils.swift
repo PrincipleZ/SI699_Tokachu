@@ -174,5 +174,23 @@ class WebServiceUtils {
         }
         
     }
+    
+    func getChannels(){
+        let params = [WSConstants.Params.USER_ID: UserDefaults.standard.string(forKey: UserDefaultsConstants.USER_ID)!]
+        Alamofire.request(WSConstants.URL.GET_CONVERSATION, method: .get, parameters: params, encoding: URLEncoding.default).validate(statusCode: 200..<300).responseJSON{
+            response in
+            switch response.result {
+            case .success:
+                print(response.result.value)
+                // subscribe to Pubnub
+                break
+            case .failure(let error):
+                print(self.LOG_TAG)
+                print(error)
+                break
+                
+            }
+        }
+    }
 
 }

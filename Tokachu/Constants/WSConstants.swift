@@ -16,6 +16,7 @@ class WSConstants {
         static let USER = SERVER + "api/users/"
         static let EVENT = SERVER + "api/event/"
         static let THEME = SERVER + "api/theme/"
+        static let GET_CONVERSATION = SERVER + "api/user_conversation/get_conversations_by_user/"
     }
     
     // JSON params
@@ -56,7 +57,7 @@ class WSConstants {
     
     
     struct PubNub {
-        static let PUBLISH_KEY = "pub-c-5e5a5f12-d0eb-4b2f-bdff-a745202b8d05"
-        static let SUBSCRIBE_KEY = "sub-c-f71e96ba-892a-11e8-85ee-866938e9174c"
+        static let PUBLISH_KEY = "pub-c-903243f9-1fd8-4ba0-b7cb-f441a52391d8"
+        static let SUBSCRIBE_KEY = "sub-c-33ade058-f43e-11e8-afd0-9e0537fa72e2"
     }
 }
