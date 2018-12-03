@@ -33,5 +33,4 @@ class ExploreDatasource: NSObject, UICollectionViewDataSource {
         cell.fill(with: explore)
         return cell
     }
-
 }
