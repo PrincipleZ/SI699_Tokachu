@@ -50,9 +50,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 self.errorLabel.text = msg
             }
             else {
-                WebServiceUtils.sharedInstance.getChannels(completion: {(a, b) in
-                    return
-                })
+                WebServiceUtils.sharedInstance.getChannels()
                 self.performSegue(withIdentifier: "LogInSegue", sender: nil)
             }
         })

@@ -181,8 +181,19 @@ class WebServiceUtils {
             response in
             switch response.result {
             case .success:
-                print(response.result.value)
-                // subscribe to Pubnub
+                if let data = response.result.value {
+                    var channelList = [String]()
+                    for i in data as! NSArray{
+                        let temp = (i as! NSDictionary)
+                        channelList.append(temp["channel_name"] as! String)
+                    }
+                    print(channelList)
+                    // subscribe to Pubnub
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.client.subscribeToChannels(channelList, withPresence: false)
+                    
+                }
+                
                 break
             case .failure(let error):
                 print(self.LOG_TAG)

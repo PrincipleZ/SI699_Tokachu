@@ -24,6 +24,7 @@
 		421C838821AA08A8008EA574 /* searchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C838721AA08A8008EA574 /* searchResultController.swift */; };
 		42ADDE0021A9CAA9007667CB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADDDFF21A9CAA9007667CB /* RegisterViewController.swift */; };
 		42BFB01021A33FB800B5D37E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BFB00F21A33FB800B5D37E /* Event.swift */; };
+		42C6473821B5DB4500190302 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6473721B5DB4500190302 /* ChatViewController.swift */; };
 		42F9EF7D2192187D00BAFA92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */; };
 		42F9EF7F2192187D00BAFA92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */; };
 		42F9EF822192187D00BAFA92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F9EF802192187D00BAFA92 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		421C838721AA08A8008EA574 /* searchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchResultController.swift; sourceTree = "<group>"; };
 		42ADDDFF21A9CAA9007667CB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		42BFB00F21A33FB800B5D37E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		42C6473721B5DB4500190302 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		42F9EF792192187D00BAFA92 /* Tokachu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tokachu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */,
 				42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */,
 				42F9EF802192187D00BAFA92 /* Main.storyboard */,
+				42C6473721B5DB4500190302 /* ChatViewController.swift */,
 				421C838721AA08A8008EA574 /* searchResultController.swift */,
 				42ADDDFF21A9CAA9007667CB /* RegisterViewController.swift */,
 				21E6C6FB21A393EE008F20C1 /* Explore */,
@@ -321,6 +324,7 @@
 				421369A221A21B1F003F0032 /* WSUtils.swift in Sources */,
 				42F9EF7D2192187D00BAFA92 /* AppDelegate.swift in Sources */,
 				211C00F1219E4AF500EA498D /* ExploreCell.swift in Sources */,
+				42C6473821B5DB4500190302 /* ChatViewController.swift in Sources */,
 				421369A021A21B1F003F0032 /* WSConstants.swift in Sources */,
 				211C00EF219E494700EA498D /* ExploreDatasource.swift in Sources */,
 				42ADDE0021A9CAA9007667CB /* RegisterViewController.swift in Sources */,

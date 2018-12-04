@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IER-jU-jM3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VRg-tL-l3t">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -323,17 +323,43 @@
             </objects>
             <point key="canvasLocation" x="-2090" y="3283"/>
         </scene>
-        <!--Updates-->
+        <!--Chat-->
         <scene sceneID="Kr2-Y1-KVM">
             <objects>
-                <viewController id="xYA-3s-b6f" customClass="UpdatesViewController" customModule="Tokachu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xYA-3s-b6f" customClass="ChatViewController" customModule="Tokachu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6qm-Oo-s0P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEw-yr-seI">
+                                <rect key="frame" x="0.0" y="116" width="375" height="467"/>
+                            </scrollView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FCQ-mX-txZ">
+                                <rect key="frame" x="0.0" y="588" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FCQ-mX-txZ" firstAttribute="trailing" secondItem="8Uf-wy-wTg" secondAttribute="trailing" id="4Z5-gE-2Bb"/>
+                            <constraint firstItem="FCQ-mX-txZ" firstAttribute="bottom" secondItem="8Uf-wy-wTg" secondAttribute="bottom" id="8v0-RZ-6ec"/>
+                            <constraint firstItem="FCQ-mX-txZ" firstAttribute="leading" secondItem="8Uf-wy-wTg" secondAttribute="leading" id="9aG-vv-5eT"/>
+                            <constraint firstItem="aEw-yr-seI" firstAttribute="trailing" secondItem="8Uf-wy-wTg" secondAttribute="trailing" id="BHP-t9-l3k"/>
+                            <constraint firstItem="aEw-yr-seI" firstAttribute="top" secondItem="8Uf-wy-wTg" secondAttribute="top" id="VWr-Jy-Ek8"/>
+                            <constraint firstItem="aEw-yr-seI" firstAttribute="leading" secondItem="8Uf-wy-wTg" secondAttribute="leading" id="g81-US-Amf"/>
+                            <constraint firstItem="FCQ-mX-txZ" firstAttribute="top" secondItem="aEw-yr-seI" secondAttribute="bottom" constant="5" id="l4W-mI-bEv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8Uf-wy-wTg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Updates" id="Wib-7P-KUS"/>
+                    <navigationItem key="navigationItem" title="Chat" id="Wib-7P-KUS"/>
+                    <connections>
+                        <outlet property="scrollBottomCon" destination="l4W-mI-bEv" id="upk-mP-obu"/>
+                        <outlet property="scrollView" destination="aEw-yr-seI" id="e45-c6-rze"/>
+                        <outlet property="textBottomCon" destination="8v0-RZ-6ec" id="fgU-Qa-7jy"/>
+                        <outlet property="textInput" destination="FCQ-mX-txZ" id="jGa-wE-mDS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4k-rD-3ug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -791,7 +817,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="SXD-WV-62r"/>
-        <segue reference="rsT-AV-g7E"/>
+        <segue reference="Tiv-qg-oyy"/>
         <segue reference="lZQ-5x-S4b"/>
     </inferredMetricsTieBreakers>
 </document>

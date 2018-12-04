@@ -8,20 +8,24 @@
 
 import UIKit
 import PubNub
+import SwiftyJSON
 
+protocol PNDelegate {
+    func receivedMessage(message: String, fromChannel: String)
+}
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
 
     var window: UIWindow?
     var client: PubNub!
-
+    var delegate: PNDelegate?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         WebServiceUtils.sharedInstance.getCategories()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd HH:mm"
-        
+        self.setupPubNub()
         return true
     }
 
@@ -56,6 +60,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
     // Handle new message from one of channels on which client has been subscribed.
     func client(_ client: PubNub, didReceiveMessage message: PNMessageResult) {
         // Handle new message stored in message.data.message
+        print()
+        print(message.data.publisher)
+        if let data = message.data.message {
+            let temp = data as! NSDictionary
+            let textMessage = temp["message"] as! String
+            let sender = temp["sender"] as! String
+            if sender == UserDefaults.standard.string(forKey: UserDefaultsConstants.USER_ID){
+                // sended by self
+            } else {
+                self.delegate?.receivedMessage(message: textMessage, fromChannel: message.data.channel)
+            }
+        }
         if message.data.channel != message.data.subscription {
             // Message has been received on channel group stored in message.data.subscription.
         }
@@ -78,21 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
                     
                     // Select last object from list of channels and send message to it.
                     let targetChannel = client.channels().last!
-                    client.publish("Hello from the PubNub Swift SDK", toChannel: targetChannel,
-                                   compressed: false, withCompletion: { (publishStatus) -> Void in
-                                    if !publishStatus.isError {
-                                        // Message successfully published to specified channel.
-                                    } else {
-                                        /**
-                                         Handle message publish error. Check 'category' property to find out
-                                         possible reason because of which request did fail.
-                                         Review 'errorData' property (which has PNErrorData data type) of status
-                                         object to get additional information about issue.
-                                         
-                                         Request can be resent using: publishStatus.retry()
-                                         */
-                                    }
-                    })
+                    
                 }
                 else {
                     /**
@@ -128,8 +130,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
         }
     }
     
-    func publishToPubNub(message: Any, channel: String) {
-        self.client.publish(message, toChannel: channel,
+    func publishToPubNub(message: String, channel: String) {
+        let json = JSON(["message": message, "sender": UserDefaults.standard.string(forKey: UserDefaultsConstants.USER_ID)]).object
+        self.client.publish(json, toChannel: channel,
                             compressed: false, withCompletion: { status in
                                 
                                 if !status.isError {
