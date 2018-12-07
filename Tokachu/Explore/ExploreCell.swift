@@ -25,48 +25,48 @@ class ExploreCell: UICollectionViewCell, UIGestureRecognizerDelegate {
     }
     
     //MARK: swipe gesture setup
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//        commonInit()
+//    }
+//    
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        commonInit()
+//    }
+//    
+//    private func commonInit() {
+//        self.contentView.backgroundColor = UIColor.white
+//        self.backgroundColor = UIColor.red
+//        
+//        deleteLabel1 = UILabel()
+//        deleteLabel1.text = "delete1"
+//        deleteLabel1.textColor = UIColor.white
+//        self.insertSubview(deleteLabel1, belowSubview: self.contentView)
+//        
+//        deleteLabel2 = UILabel()
+//        deleteLabel2.text = "delete2"
+//        deleteLabel2.textColor = UIColor.white
+//        self.insertSubview(deleteLabel2, belowSubview: self.contentView)
+//        
+//        pan = UIPanGestureRecognizer(target: self, action: #selector(onPan(_:)))
+//        pan.delegate = self
+//        self.addGestureRecognizer(pan)
+//    }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    private func commonInit() {
-        self.contentView.backgroundColor = UIColor.gray
-        self.backgroundColor = UIColor.blue
-        
-        deleteLabel1 = UILabel()
-        deleteLabel1.text = "delete1"
-        deleteLabel1.textColor = UIColor.white
-        self.insertSubview(deleteLabel1, belowSubview: self.contentView)
-        
-        deleteLabel2 = UILabel()
-        deleteLabel2.text = "delete2"
-        deleteLabel2.textColor = UIColor.white
-        self.insertSubview(deleteLabel2, belowSubview: self.contentView)
-        
-        pan = UIPanGestureRecognizer(target: self, action: #selector(onPan(_:)))
-        pan.delegate = self
-        self.addGestureRecognizer(pan)
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        if (pan.state == UIGestureRecognizer.State.changed) {
-            let p: CGPoint = pan.translation(in: self)
-            let width = self.contentView.frame.width
-            let height = self.contentView.frame.height
-            self.contentView.frame = CGRect(x: p.x,y: 0, width: width, height: height);
-            self.deleteLabel1.frame = CGRect(x: p.x - deleteLabel1.frame.size.width-10, y: 0, width: 100, height: height)
-            self.deleteLabel2.frame = CGRect(x: p.x + width + deleteLabel2.frame.size.width, y: 0, width: 100, height: height)
-        }
-        
-    }
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        
+//        if (pan.state == UIGestureRecognizer.State.changed) {
+//            let p: CGPoint = pan.translation(in: self)
+//            let width = self.contentView.frame.width
+//            let height = self.contentView.frame.height
+//            self.contentView.frame = CGRect(x: p.x,y: 0, width: width, height: height);
+//            self.deleteLabel1.frame = CGRect(x: p.x - deleteLabel1.frame.size.width-10, y: 0, width: 100, height: height)
+//            self.deleteLabel2.frame = CGRect(x: p.x + width + deleteLabel2.frame.size.width, y: 0, width: 100, height: height)
+//        }
+//        
+//    }
     
     @objc func onPan(_ pan: UIPanGestureRecognizer) {
         if pan.state == UIGestureRecognizer.State.began {

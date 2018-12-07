@@ -10,8 +10,8 @@
 class WSConstants {
     // URL constants
     struct URL {
-        static let SERVER = "http://127.0.0.1:8000/"
-//        static let SERVER = "https://b68999d5.ngrok.io/"
+//        static let SERVER = "http://127.0.0.1:8000/"
+        static let SERVER = "https://199037f9.ngrok.io/"
         
         static let USER = SERVER + "api/users/"
         static let EVENT = SERVER + "api/event/"
