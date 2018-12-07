@@ -323,6 +323,38 @@
             </objects>
             <point key="canvasLocation" x="-2090" y="3283"/>
         </scene>
+        <!--Inbox-->
+        <scene sceneID="qhy-dh-FXH">
+            <objects>
+                <tableViewController id="oTP-R3-I2I" userLabel="Inbox" customClass="InboxViewController" customModule="Tokachu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1yr-bD-x6B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="conversationCell" rowHeight="61" id="Mwr-V1-67P">
+                                <rect key="frame" x="0.0" y="28" width="375" height="61"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mwr-V1-67P" id="ME6-vn-rrg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="xYA-3s-b6f" kind="show" identifier="showDetail" id="hTM-dB-oIk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oTP-R3-I2I" id="mmL-RS-WFq"/>
+                            <outlet property="delegate" destination="oTP-R3-I2I" id="vNA-rX-c7s"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="z5S-XB-RAB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhE-Ea-uUB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-911.20000000000005" y="1646.6266866566718"/>
+        </scene>
         <!--Chat-->
         <scene sceneID="Kr2-Y1-KVM">
             <objects>
@@ -353,8 +385,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Uf-wy-wTg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat" id="Wib-7P-KUS"/>
+                    <navigationItem key="navigationItem" title="Chat" id="Wib-7P-KUS">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ke3-eM-2rt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pM7-ae-S1n">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <action selector="pressConfirm:" destination="xYA-3s-b6f" eventType="touchUpInside" id="XIP-0I-T5B"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="confirmButton" destination="pM7-ae-S1n" id="F9h-sn-SA4"/>
                         <outlet property="scrollBottomCon" destination="l4W-mI-bEv" id="upk-mP-obu"/>
                         <outlet property="scrollView" destination="aEw-yr-seI" id="e45-c6-rze"/>
                         <outlet property="textBottomCon" destination="8v0-RZ-6ec" id="fgU-Qa-7jy"/>
@@ -363,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4k-rD-3ug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-332" y="1615.1424287856073"/>
+            <point key="canvasLocation" x="30" y="1579"/>
         </scene>
         <!--Account-->
         <scene sceneID="g9z-ka-7ek">
@@ -745,7 +789,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="xYA-3s-b6f" kind="relationship" relationship="rootViewController" id="ReM-G9-7Mm"/>
+                        <segue destination="oTP-R3-I2I" kind="relationship" relationship="rootViewController" id="hXV-k5-sgc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dw2-zk-bkW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -817,7 +861,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="SXD-WV-62r"/>
-        <segue reference="Tiv-qg-oyy"/>
+        <segue reference="rsT-AV-g7E"/>
         <segue reference="lZQ-5x-S4b"/>
     </inferredMetricsTieBreakers>
 </document>

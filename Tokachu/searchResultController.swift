@@ -152,6 +152,7 @@ class searchResultController: UITableViewController {
 
                 break
             }
+            print(self.currentCategory)
             self.delegate?.updateFilter(categories: self.currentCategory, start_time: start_time, end_time: end_time)
         }
 
