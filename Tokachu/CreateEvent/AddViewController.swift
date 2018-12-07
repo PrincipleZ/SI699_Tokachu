@@ -30,6 +30,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         // Do any additional setup after loading the view.
         self.categoryPicker.delegate = self
         self.categoryPicker.dataSource = self
+
         scrollView.keyboardDismissMode = .onDrag
         self.categoryText = Array(self.categoryData.keys)
         
@@ -38,6 +39,12 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             eventTitle.text = explore.title
             eventLocation.text = explore.location
             exploreImage.image = explore.image
+        }
+        
+        if ((eventTitle?.text) != nil && eventTitle?.text != "") {
+            title = eventTitle.text
+        } else {
+            title = "Create Event"
         }
         
     }
@@ -97,7 +104,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         if let
             eventTitle = self.eventTitle.text, eventTitle != "",
             let eventLocation = self.eventLocation.text, eventLocation != "" {
-            self.explore = Explore(title: eventTitle, location: eventLocation, image: UIImage(named: "event-image-placeholder")!)
+            self.explore = Explore(title: eventTitle, location: eventLocation, image: exploreImage.image!)
         }
         
         
