@@ -175,7 +175,7 @@ class WebServiceUtils {
         
     }
     
-    func getChannels(){
+    func getChannels(completion: @escaping (Bool, [String]) -> ()){
         let params = [WSConstants.Params.USER_ID: UserDefaults.standard.string(forKey: UserDefaultsConstants.USER_ID)!]
         Alamofire.request(WSConstants.URL.GET_CONVERSATION, method: .get, parameters: params, encoding: URLEncoding.default).validate(statusCode: 200..<300).responseJSON{
             response in
@@ -191,17 +191,33 @@ class WebServiceUtils {
                     // subscribe to Pubnub
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
                     appDelegate.client.subscribeToChannels(channelList, withPresence: false)
-                    
+                    UserDefaults.standard.set(channelList, forKey: "channel")
+                    completion(true, channelList)
+                } else {
+                    completion(true, [String]())
                 }
-                
                 break
             case .failure(let error):
                 print(self.LOG_TAG)
+                completion(true, [String]())
                 print(error)
                 break
                 
             }
         }
     }
-
+    
+    func subscribeToChannel(channel_id: String, completion: @escaping (Bool) -> ()) {
+        let params = ["user_id": UserDefaults.standard.string(forKey: UserDefaultsConstants.USER_ID)!, "conversation_id":channel_id]
+        Alamofire.request(WSConstants.URL.SERVER + "api/user_conversation/", method: .post, parameters: params, encoding: URLEncoding.default).responseJSON{
+            response in
+            
+                print(response.result)
+               let appDelegate = UIApplication.shared.delegate as! AppDelegate
+               appDelegate.client.subscribeToChannels([channel_id], withPresence: false)
+                completion(true)
+            
+            }
+        
+    }
 }

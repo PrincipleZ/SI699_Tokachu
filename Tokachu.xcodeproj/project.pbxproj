@@ -22,6 +22,7 @@
 		421369A121A21B1F003F0032 /* UserDefaultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699C21A21B1F003F0032 /* UserDefaultConstants.swift */; };
 		421369A221A21B1F003F0032 /* WSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4213699E21A21B1F003F0032 /* WSUtils.swift */; };
 		421C838821AA08A8008EA574 /* searchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421C838721AA08A8008EA574 /* searchResultController.swift */; };
+		4249F1ED21B8BFD300707EE1 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4249F1EC21B8BFD300707EE1 /* InboxViewController.swift */; };
 		42ADDE0021A9CAA9007667CB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADDDFF21A9CAA9007667CB /* RegisterViewController.swift */; };
 		42BFB01021A33FB800B5D37E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BFB00F21A33FB800B5D37E /* Event.swift */; };
 		42C6473821B5DB4500190302 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6473721B5DB4500190302 /* ChatViewController.swift */; };
@@ -50,6 +51,7 @@
 		4213699C21A21B1F003F0032 /* UserDefaultConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultConstants.swift; sourceTree = "<group>"; };
 		4213699E21A21B1F003F0032 /* WSUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSUtils.swift; sourceTree = "<group>"; };
 		421C838721AA08A8008EA574 /* searchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchResultController.swift; sourceTree = "<group>"; };
+		4249F1EC21B8BFD300707EE1 /* InboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
 		42ADDDFF21A9CAA9007667CB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		42BFB00F21A33FB800B5D37E /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		42C6473721B5DB4500190302 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				42F9EF7C2192187D00BAFA92 /* AppDelegate.swift */,
 				42F9EF7E2192187D00BAFA92 /* LoginViewController.swift */,
 				42F9EF802192187D00BAFA92 /* Main.storyboard */,
+				4249F1EC21B8BFD300707EE1 /* InboxViewController.swift */,
 				42C6473721B5DB4500190302 /* ChatViewController.swift */,
 				421C838721AA08A8008EA574 /* searchResultController.swift */,
 				42ADDDFF21A9CAA9007667CB /* RegisterViewController.swift */,
@@ -328,6 +331,7 @@
 				421369A021A21B1F003F0032 /* WSConstants.swift in Sources */,
 				211C00EF219E494700EA498D /* ExploreDatasource.swift in Sources */,
 				42ADDE0021A9CAA9007667CB /* RegisterViewController.swift in Sources */,
+				4249F1ED21B8BFD300707EE1 /* InboxViewController.swift in Sources */,
 				2163B6AD2197AC2500728639 /* FavoriteViewController.swift in Sources */,
 				421369A121A21B1F003F0032 /* UserDefaultConstants.swift in Sources */,
 				2163B6AB2197AAF700728639 /* ExploreViewController.swift in Sources */,
@@ -479,13 +483,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TGUV47EGUU;
+				DEVELOPMENT_TEAM = TDWW635G82;
 				INFOPLIST_FILE = Tokachu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.shaungc;
+				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.yuanzez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -498,13 +502,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TGUV47EGUU;
+				DEVELOPMENT_TEAM = TDWW635G82;
 				INFOPLIST_FILE = Tokachu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.shaungc;
+				PRODUCT_BUNDLE_IDENTIFIER = team.si699.Tokachu.yuanzez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

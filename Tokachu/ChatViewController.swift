@@ -14,14 +14,17 @@ class ChatViewController: UIViewController, UITextFieldDelegate, PNDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var textBottomCon: NSLayoutConstraint!
     @IBOutlet weak var scrollBottomCon: NSLayoutConstraint!
+    @IBOutlet weak var confirmButton: UIButton!
     
     @IBOutlet weak var textInput: UITextField!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var currentHeight = 0.0
     var keyboardUp = false
-    var channel: String = "s0aq9844dnzxyzvmd8sjr47jmnrjdugvr6t5oksldsppls7f8rr4ggrrkflis4fs"
+    var channel: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(self.channel)
         scrollView.showsVerticalScrollIndicator = true
         print(scrollView.frame.height)
         scrollView.contentSize = CGSize(width: self.view.bounds.width, height: 0)
@@ -30,7 +33,12 @@ class ChatViewController: UIViewController, UITextFieldDelegate, PNDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         appDelegate.delegate = self
         textInput.delegate = self
-        
+        appDelegate.client.historyForChannel(self.channel, withCompletion: {(result, status) in
+            for message in result!.data.messages{
+                let messageData = message as! Dictionary<String, String>
+                self.presentContent(text: messageData["message"]!, sended: messageData["sender"]! == UserDefaults.standard.string(forKey: UserDefaultsConstants.USER_ID))
+            }
+        })
     }
     
     override func viewDidLayoutSubviews() {
@@ -73,6 +81,20 @@ class ChatViewController: UIViewController, UITextFieldDelegate, PNDelegate {
         }
         self.keyboardUp = false
     }
+    
+    
+    @IBAction func pressConfirm(_ sender: Any) {
+        confirmButton.tintColor = UIColor.gray
+        print("here")
+        WebServiceUtils.sharedInstance.subscribeToChannel(channel_id: "14", completion: {a in
+            print(a)
+        })
+    }
+    
+    
+    
+    
+    
     
     func moveUpTextfield(offset: Double){
         if offset > 0{
